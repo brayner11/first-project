@@ -1,4 +1,4 @@
-const Person = ({  }) => {
+const Person = ({ name, age }) => {
     return (
        <div>
         <h2>{name}</h2>

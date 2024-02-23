@@ -1,12 +1,12 @@
 import { useState } from "react"
 
-const Form = () => {
-    const [input, setInput] = useState('')
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        alert(`${input} says hello!!!`)
-    }
+const Form = ({ 
+    handleSubmit, 
+    ageInput, 
+    setAgeInput, 
+    nameInput, 
+    setNameInput 
+    }) => {
 
     return (
         <form onSubmit={handleSubmit}>
@@ -14,11 +14,18 @@ const Form = () => {
                 Enter your name:
                 <input 
                     type="text"
-                    value={input}
-                    onChange={(event) => setInput(event.target.value)}
+                    value={nameInput}
+                    onChange={(event) => setNameInput(event.target.value)}
                 />
             </label>
-            <h1>{input}</h1>
+            <label>
+                Enter your age:
+                <input
+                    type="text"
+                    value={ageInput}
+                    onChange={(event) => setAgeInput(event.target.value)}
+                />
+            </label>
             <input type="submit" />
         </form>
     )
