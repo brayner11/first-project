@@ -1,30 +1,17 @@
-import { useState } from "react";
+import { useState } from "react"
 
-const Form = ({
-    handleSubmit,
-     ageInput, 
-     setAgeInput, 
-     nameInput, 
-     setNameInput
-    }) => {
+const Form = () => {
+    const [input, setInput] = useState('')
 
+    const handleSubmit = () => {}
 
     return (
         <form onSubmit={handleSubmit}>
             <label>
                 Enter your name:
-                <input
-                    type="text"
-                    value={nameInput}
-                    onChange={(event) => setNameInput(event.target.value)}
-                />
-            </label>
-            <label>
-                Enter your age:
-                <input
-                    type="text"
-                    value={ageInput}
-                    onChange={(event) => setAgeInput(event.target.value)}
+                <input 
+                
+
                 />
             </label>
             <input type="submit" />
